@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federalist Society — Georgetown University Law Center</title>
+  <meta name="description" content="The Georgetown Law Federalist Society brings together students committed to the rule of law, individual liberty, and limited government." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2744;
+      --navy-light: #243360;
+      --cream: #e8dfc8;
+      --cream-muted: #c8bfa8;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-tertiary: #888;
+      --border: rgba(0,0,0,0.12);
+      --border-strong: rgba(0,0,0,0.22);
+      --bg: #ffffff;
+      --bg-secondary: #f7f5f1;
+      --radius: 6px;
+      --radius-lg: 10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      color: var(--text);
+      background: var(--bg);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg);
+      border-bottom: 0.5px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px;
+      height: 64px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: var(--navy); border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-mark svg { width: 20px; height: 20px; }
+    .logo-text { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; line-height: 1.2; }
+    .logo-text span { display: block; font-size: 11px; font-weight: 400; color: var(--text-secondary); letter-spacing: 0.06em; font-family: 'EB Garamond', serif; font-style: italic; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 14px; color: var(--text-secondary); letter-spacing: 0.03em; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--navy); color: var(--cream);
+      border: none; border-radius: 3px;
+      padding: 8px 20px; font-size: 13px;
+      font-family: 'EB Garamond', serif; letter-spacing: 0.05em;
+      cursor: pointer; transition: background 0.15s;
+    }
+    .nav-cta:hover { background: var(--navy-light); }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid; grid-template-columns: 1fr 260px;
+      gap: 60px; align-items: center;
+      padding: 72px 40px 64px;
+      border-bottom: 0.5px solid var(--border);
+      max-width: 1100px; margin: 0 auto;
+    }
+    .hero-eyebrow { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 20px; }
+    .hero-title { font-family: 'Playfair Display', serif; font-size: 46px; font-weight: 700; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 24px; }
+    .hero-title em { font-style: italic; font-weight: 400; }
+    .hero-sub { font-size: 18px; line-height: 1.7; color: var(--text-secondary); max-width: 540px; margin-bottom: 32px; }
+    .hero-actions { display: flex; gap: 12px; align-items: center; }
+    .btn-primary { padding: 12px 28px; background: var(--navy); color: var(--cream); border: none; border-radius: 3px; font-family: 'EB Garamond', serif; font-size: 16px; cursor: pointer; letter-spacing: 0.03em; transition: background 0.15s; }
+    .btn-primary:hover { background: var(--navy-light); }
+    .btn-secondary { padding: 11px 22px; background: transparent; border: 0.5px solid var(--border-strong); border-radius: 3px; font-family: 'EB Garamond', serif; font-size: 16px; cursor: pointer; color: var(--text); letter-spacing: 0.03em; transition: border-color 0.15s; }
+    .btn-secondary:hover { border-color: var(--navy); }
+    .hero-aside { border-left: 0.5px solid var(--border); padding-left: 48px; }
+    .stat { margin-bottom: 32px; }
+    .stat:last-child { margin-bottom: 0; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; color: var(--navy); line-height: 1; }
+    .stat-label { font-size: 13px; color: var(--text-tertiary); letter-spacing: 0.05em; margin-top: 4px; }
+
+    /* ── EVENT BANNER ── */
+    .banner {
+      background: var(--navy); padding: 14px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .banner p { font-size: 14px; color: var(--cream-muted); letter-spacing: 0.02em; }
+    .banner strong { color: var(--cream); font-weight: 500; }
+    .banner a { font-size: 13px; color: var(--cream-muted); letter-spacing: 0.07em; display: flex; align-items: center; gap: 6px; transition: color 0.15s; }
+    .banner a:hover { color: var(--cream); }
+
+    /* ── SECTIONS ── */
+    section { padding: 56px 40px; border-bottom: 0.5px solid var(--border); max-width: 1100px; margin: 0 auto; }
+    .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 36px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; }
+    .section-link { font-size: 14px; color: var(--text-secondary); display: flex; align-items: center; gap: 5px; transition: color 0.15s; }
+    .section-link:hover { color: var(--text); }
+
+    /* ── EVENTS ── */
+    .events-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .event-card { border: 0.5px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color 0.15s; }
+    .event-card:hover { border-color: var(--navy); }
+    .event-head { background: var(--navy); padding: 16px 18px; display: flex; align-items: center; gap: 14px; }
+    .event-date { text-align: center; flex-shrink: 0; }
+    .event-month { font-size: 10px; color: var(--cream-muted); letter-spacing: 0.12em; text-transform: uppercase; }
+    .event-day { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--cream); line-height: 1; }
+    .event-meta { border-left: 0.5px solid rgba(200,191,168,0.3); padding-left: 14px; }
+    .event-type { font-size: 10px; color: var(--cream-muted); letter-spacing: 0.12em; text-transform: uppercase; }
+    .event-name { font-family: 'Playfair Display', serif; font-size: 14px; color: var(--cream); margin-top: 3px; line-height: 1.3; }
+    .event-body { padding: 16px 18px; }
+    .event-speaker { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+    .event-speaker strong { color: var(--text); font-weight: 500; display: block; margin-bottom: 2px; }
+    .event-time { margin-top: 12px; font-size: 13px; color: var(--text-tertiary); letter-spacing: 0.03em; }
+
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .about-text { font-size: 17px; line-height: 1.8; color: var(--text-secondary); }
+    .about-text p + p { margin-top: 16px; }
+    .pillars { display: flex; flex-direction: column; gap: 16px; }
+    .pillar { display: flex; align-items: flex-start; gap: 16px; padding: 16px; border: 0.5px solid var(--border); border-radius: var(--radius); transition: border-color 0.15s; }
+    .pillar:hover { border-color: var(--navy); }
+    .pillar-icon { width: 38px; height: 38px; flex-shrink: 0; background: rgba(26,39,68,0.07); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .pillar-icon svg { width: 18px; height: 18px; stroke: var(--navy); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .pillar h4 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+    .pillar p { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+
+    /* ── LEADERSHIP ── */
+    .board-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .board-card { border: 0.5px solid var(--border); border-radius: var(--radius); padding: 20px 16px; text-align: center; transition: border-color 0.15s; }
+    .board-card:hover { border-color: var(--navy); }
+    .avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+    .avatar span { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 500; color: var(--cream); }
+    .board-name { font-size: 15px; font-weight: 500; }
+    .board-role { font-size: 13px; color: var(--text-secondary); margin-top: 3px; font-style: italic; }
+    .board-year { font-size: 12px; color: var(--text-tertiary); margin-top: 3px; letter-spacing: 0.04em; }
+
+    /* ── JOIN ── */
+    .join-section { background: var(--bg-secondary); padding: 64px 40px; text-align: center; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
+    .join-section h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; margin-bottom: 14px; }
+    .join-section p { font-size: 18px; color: var(--text-secondary); line-height: 1.7; max-width: 500px; margin: 0 auto 32px; }
+    .join-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .join-input { padding: 11px 18px; border: 0.5px solid var(--border-strong); border-radius: 3px; font-size: 16px; font-family: 'EB Garamond', serif; background: var(--bg); color: var(--text); width: 260px; outline: none; transition: border-color 0.15s; }
+    .join-input:focus { border-color: var(--navy); }
+
+    /* ── FOOTER ── */
+    footer { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; }
+    footer p { font-size: 13px; color: var(--text-tertiary); letter-spacing: 0.02em; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--text-tertiary); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px; }
+      .hero-aside { border-left: none; border-top: 0.5px solid var(--border); padding-left: 0; padding-top: 32px; display: flex; gap: 40px; }
+      .hero-title { font-size: 36px; }
+      section { padding: 48px 24px; }
+      .events-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+      .board-grid { grid-template-columns: repeat(2, 1fr); }
+      .banner { padding: 12px 24px; flex-direction: column; gap: 8px; align-items: flex-start; }
+      footer { flex-direction: column; gap: 12px; align-items: flex-start; padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 2L12.5 7.5L18 8.4L14 12.3L15 18L10 15.3L5 18L6 12.3L2 8.4L7.5 7.5L10 2Z" fill="#e8dfc8"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        Federalist Society
+        <span>Georgetown University Law Center</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#join">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join Us</button>
+  </nav>
+
+  <!-- HERO -->
+  <div style="border-bottom: 0.5px solid var(--border);">
+    <div class="hero">
+      <div>
+        <p class="hero-eyebrow">Georgetown Law · Washington, D.C.</p>
+        <h1 class="hero-title">Debating the <em>first principles</em><br>of law and policy</h1>
+        <p class="hero-sub">The Georgetown Law Federalist Society brings together students who believe in the rule of law, individual liberty, and limited government. We host distinguished speakers, publish scholarship, and connect members with a lifelong professional network.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('events').scrollIntoView({behavior:'smooth'})">Upcoming Events</button>
+          <button class="btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn More</button>
+        </div>
+      </div>
+      <div class="hero-aside">
+        <div class="stat">
+          <div class="stat-num">240+</div>
+          <div class="stat-label">Active members</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">18</div>
+          <div class="stat-label">Events per year</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">1982</div>
+          <div class="stat-label">Founded</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <p><strong>Next event:</strong> "The Future of Administrative Law" — Hon. Neomi Rao, D.C. Circuit · May 19, McDonough 200</p>
+    <a href="#events">RSVP →</a>
+  </div>
+
+  <!-- EVENTS -->
+  <div style="border-bottom: 0.5px solid var(--border);">
+    <section id="events">
+      <div class="section-header">
+        <h2 class="section-title">Upcoming events</h2>
+        <a href="#" class="section-link">View all →</a>
+      </div>
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-head">
+            <div class="event-date">
+              <div class="event-month">May</div>
+              <div class="event-day">19</div>
+            </div>
+            <div class="event-meta">
+              <div class="event-type">Speaker</div>
+              <div class="event-name">The Future of Admin Law</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <div class="event-speaker">
+              <strong>Hon. Neomi Rao</strong>
+              U.S. Court of Appeals, D.C. Circuit
+            </div>
+            <div class="event-time">6:00 pm · McDonough 200</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-head">
+            <div class="event-date">
+              <div class="event-month">May</div>
+              <div class="event-day">28</div>
+            </div>
+            <div class="event-meta">
+              <div class="event-type">Debate</div>
+              <div class="event-name">Originalism & the 14th Amendment</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <div class="event-speaker">
+              <strong>Panel Discussion</strong>
+              Professors Mitchell, Barnett & Guest
+            </div>
+            <div class="event-time">5:30 pm · Hart Auditorium</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-head">
+            <div class="event-date">
+              <div class="event-month">Jun</div>
+              <div class="event-day">4</div>
+            </div>
+            <div class="event-meta">
+              <div class="event-type">Networking</div>
+              <div class="event-name">End-of-Year Alumni Reception</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <div class="event-speaker">
+              <strong>Annual Gathering</strong>
+              Students, faculty & alumni
+            </div>
+            <div class="event-time">7:00 pm · Faculty Lounge</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT -->
+  <div style="border-bottom: 0.5px solid var(--border);">
+    <section id="about">
+      <div class="section-header">
+        <h2 class="section-title">About the chapter</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>The Georgetown Law Federalist Society is one of the oldest and most active law school chapters in the country. We are committed to creating a forum for robust debate on legal and policy questions rooted in constitutionalism, separation of powers, and individual rights.</p>
+          <p>We welcome all students with a genuine interest in these questions, regardless of political affiliation. Our speakers have included sitting federal judges, prominent practitioners, and leading legal scholars.</p>
+          <p>Members gain access to the national Federalist Society network — a community of over 70,000 lawyers, judges, and scholars — offering unparalleled professional connections for careers in the judiciary, public service, and private practice.</p>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5 9-4.5zM3 12l9 4.5 9-4.5M3 17l9 4.5 9-4.5"/></svg>
+            </div>
+            <div>
+              <h4>Rule of law</h4>
+              <p>Rigorous debate grounded in constitutional text, history, and structure.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </div>
+            <div>
+              <h4>Professional network</h4>
+              <p>Access to the national FedSoc alumni network of judges, clerks, and practitioners.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div>
+              <h4>Scholarship</h4>
+              <p>Workshops, writing opportunities, and the annual symposium on constitutional law.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- LEADERSHIP -->
+  <div style="border-bottom: 0.5px solid var(--border);">
+    <section id="leadership">
+      <div class="section-header">
+        <h2 class="section-title">2024–25 leadership</h2>
+      </div>
+      <div class="board-grid">
+        <div class="board-card">
+          <div class="avatar"><span>EW</span></div>
+          <div class="board-name">Eleanor Whitfield</div>
+          <div class="board-role">President</div>
+          <div class="board-year">3L · J.D. 2025</div>
+        </div>
+        <div class="board-card">
+          <div class="avatar"><span>JA</span></div>
+          <div class="board-name">James Ackerman</div>
+          <div class="board-role">Vice President</div>
+          <div class="board-year">2L · J.D. 2026</div>
+        </div>
+        <div class="board-card">
+          <div class="avatar"><span>SC</span></div>
+          <div class="board-name">Sofia Chen</div>
+          <div class="board-role">Events Director</div>
+          <div class="board-year">2L · J.D. 2026</div>
+        </div>
+        <div class="board-card">
+          <div class="avatar"><span>MK</span></div>
+          <div class="board-name">Marcus Kelly</div>
+          <div class="board-role">Treasurer</div>
+          <div class="board-year">1L · J.D. 2027</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- JOIN -->
+  <div class="join-section" id="join">
+    <h2>Become a member</h2>
+    <p>Join Georgetown Law's Federalist Society chapter to engage in serious legal debate, build lasting professional relationships, and connect with the national network.</p>
+    <div class="join-form">
+      <input class="join-input" type="email" placeholder="your.name@law.georgetown.edu" />
+      <button class="btn-primary">Request to join</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Federalist Society, Georgetown University Law Center · 600 New Jersey Ave NW, Washington, D.C. 20001</p>
+    <div class="footer-links">
+      <a href="mailto:fedsoc@law.georgetown.edu">Contact</a>
+      <a href="https://fedsoc.org" target="_blank" rel="noopener">Fedsoc.org</a>
+    </div>
+  </footer>
+
+</body>
+</html>
