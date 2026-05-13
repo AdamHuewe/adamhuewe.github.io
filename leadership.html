@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership — Federalist Society, Georgetown University Law Center</title>
+  <meta name="description" content="Meet the 2026–27 leadership of the Georgetown Law Federalist Society." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gu-blue:        #1a2744;
+      --gu-blue-2:      #243360;
+      --gu-gray:        #666;
+      --gu-gray-light:  #aaa;
+      --gu-putty:       #c8bfa8;
+      --gu-gold:        #e8dfc8;
+      --text:           #1a1a1a;
+      --text-secondary: #555;
+      --border:         rgba(0,0,0,0.12);
+      --bg:             #ffffff;
+      --bg-secondary:   #f7f5f1;
+      --radius:         4px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'EB Garamond', Georgia, serif; color: var(--text); background: var(--bg); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--gu-blue);
+      border-bottom: 2px solid var(--gu-blue-2);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 68px;
+    }
+    .nav-logo { display: flex; flex-direction: column; justify-content: center; }
+    .nav-logo-primary { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: #fff; letter-spacing: 0.01em; line-height: 1.2; }
+    .nav-logo-secondary { font-family: 'EB Garamond', serif; font-size: 11px; font-weight: 400; font-style: italic; color: var(--gu-putty); letter-spacing: 0.07em; margin-top: 2px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 13px; color: var(--gu-putty); letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.15s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .nav-cta { background: transparent; color: var(--gu-gold); border: 1px solid var(--gu-gold); border-radius: 2px; padding: 8px 20px; font-size: 12px; font-family: 'EB Garamond', serif; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: background 0.15s, color 0.15s; }
+    .nav-cta:hover { background: var(--gu-gold); color: var(--gu-blue); }
+
+    /* ── PAGE HEADER ── */
+    .page-header { background: var(--gu-blue); border-bottom: 3px solid var(--gu-gold); padding: 52px 48px 48px; }
+    .page-header-inner { max-width: 1140px; margin: 0 auto; }
+    .page-eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gu-putty); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+    .page-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gu-gold); }
+    .page-title { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 14px; }
+    .page-sub { font-size: 17px; color: var(--gu-putty); max-width: 560px; line-height: 1.7; }
+
+    /* ── CONTENT ── */
+    .content { max-width: 1140px; margin: 0 auto; padding: 64px 48px; }
+
+    /* ── MEMBER CARD ── */
+    .member { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start; padding-bottom: 56px; margin-bottom: 56px; border-bottom: 1px solid var(--border); }
+    .member:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .member-photo-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; position: sticky; top: 88px; }
+    .member-photo {
+      width: 200px; height: 200px; border-radius: 50%;
+      background: var(--gu-blue);
+      border: 3px solid var(--gu-gold);
+      overflow: hidden; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .member-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .member-photo span { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 500; color: var(--gu-gold); }
+    .member-photo-name { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--gu-blue); text-align: center; }
+    .member-photo-role { font-size: 13px; color: var(--gu-gray); font-style: italic; text-align: center; margin-top: 2px; }
+    .member-photo-year { font-size: 12px; color: var(--gu-gray-light); letter-spacing: 0.05em; text-align: center; margin-top: 2px; }
+
+    /* ── BIO ── */
+    .member-bio { padding-top: 8px; }
+    .member-bio-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--gu-blue); margin-bottom: 4px; }
+    .member-bio-role { font-size: 15px; color: var(--gu-gray); font-style: italic; margin-bottom: 6px; }
+    .member-bio-divider { width: 40px; height: 2px; background: var(--gu-gold); margin-bottom: 20px; }
+    .member-bio-text { font-size: 17px; line-height: 1.85; color: var(--text-secondary); }
+    .member-bio-text p + p { margin-top: 16px; }
+    .member-bio-placeholder {
+      font-size: 15px; color: var(--gu-gray-light); font-style: italic;
+      padding: 28px 32px;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      line-height: 1.6;
+    }
+
+    /* ── COMING SOON CARD ── */
+    .member-pending { display: flex; align-items: center; gap: 32px; padding: 28px 32px; border: 1px solid var(--border); border-left: 3px solid var(--gu-blue); border-radius: 0 var(--radius) var(--radius) 0; margin-bottom: 24px; background: var(--bg-secondary); }
+    .member-pending-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--gu-blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .member-pending-icon span { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gu-gold); }
+    .member-pending-role { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--gu-blue); }
+    .member-pending-note { font-size: 14px; color: var(--gu-gray); margin-top: 3px; font-style: italic; }
+
+    /* ── SECTION DIVIDER ── */
+    .leadership-section-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gu-gray); margin-bottom: 40px; display: flex; align-items: center; gap: 12px; }
+    .leadership-section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── FOOTER ── */
+    footer { background: #08122a; padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid var(--gu-blue-2); }
+    footer p { font-size: 12px; color: rgba(200,191,168,0.5); letter-spacing: 0.03em; }
+    .footer-links { display: flex; gap: 28px; }
+    .footer-links a { font-size: 12px; color: rgba(200,191,168,0.5); transition: color 0.15s; letter-spacing: 0.04em; }
+    .footer-links a:hover { color: var(--gu-putty); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .page-header { padding: 40px 24px; }
+      .page-title { font-size: 32px; }
+      .content { padding: 40px 24px; }
+      .member { grid-template-columns: 1fr; gap: 28px; }
+      .member-photo-wrap { flex-direction: row; align-items: center; position: static; }
+      .member-photo { width: 100px; height: 100px; }
+      .member-photo span { font-size: 28px; }
+      footer { flex-direction: column; gap: 16px; align-items: flex-start; padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-primary">Federalist Society</div>
+      <div class="nav-logo-secondary">Georgetown University Law Center</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#events">Events</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="leadership.html" class="active">Leadership</a></li>
+      <li><a href="index.html#join">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location='index.html#join'">Join Us</button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Georgetown Law Federalist Society</p>
+      <h1 class="page-title">2026–27 Leadership</h1>
+      <p class="page-sub">Meet the officers leading the Georgetown Law Federalist Society for the 2026–27 academic year.</p>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <div class="leadership-section-label">Executive Board</div>
+
+    <!-- SARA BALLOU -->
+    <div class="member" id="sara-ballou">
+      <div class="member-photo-wrap">
+        <div class="member-photo">
+          <img src="images/sara-ballou.jpg" alt="Sara Ballou" />
+        </div>
+        <div>
+          <div class="member-photo-name">Sara Ballou</div>
+          <div class="member-photo-role">President</div>
+          <div class="member-photo-year">3L · J.D. 2027</div>
+        </div>
+      </div>
+      <div class="member-bio">
+        <div class="member-bio-title">Sara Ballou</div>
+        <div class="member-bio-role">President</div>
+        <div class="member-bio-divider"></div>
+        <div class="member-bio-placeholder">
+          Bio coming soon. Check back for Sara's full biography.
+        </div>
+      </div>
+    </div>
+
+    <!-- ADAM HUEWE -->
+    <div class="member" id="adam-huewe">
+      <div class="member-photo-wrap">
+        <div class="member-photo">
+          <img src="images/adam-huewe.jpg" alt="Adam Huewe" />
+        </div>
+        <div>
+          <div class="member-photo-name">Adam Huewe</div>
+          <div class="member-photo-role">Executive Vice President</div>
+          <div class="member-photo-year">3L · J.D. 2027</div>
+        </div>
+      </div>
+      <div class="member-bio">
+        <div class="member-bio-title">Adam Huewe</div>
+        <div class="member-bio-role">Executive Vice President</div>
+        <div class="member-bio-divider"></div>
+        <div class="member-bio-placeholder">
+          Bio coming soon. Check back for Adam's full biography.
+        </div>
+      </div>
+    </div>
+
+    <!-- PENDING POSITIONS -->
+    <div class="leadership-section-label" style="margin-top: 8px;">Additional Officers</div>
+
+    <div class="member-pending">
+      <div class="member-pending-icon"><span>—</span></div>
+      <div>
+        <div class="member-pending-role">Events Director</div>
+        <div class="member-pending-note">To be announced — check back soon.</div>
+      </div>
+    </div>
+
+    <div class="member-pending">
+      <div class="member-pending-icon"><span>—</span></div>
+      <div>
+        <div class="member-pending-role">Treasurer</div>
+        <div class="member-pending-note">To be announced — check back soon.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Federalist Society, Georgetown University Law Center · 600 New Jersey Ave NW, Washington, D.C. 20001</p>
+    <div class="footer-links">
+      <a href="mailto:fedsoc@law.georgetown.edu">Contact</a>
+      <a href="https://fedsoc.org" target="_blank" rel="noopener">Fedsoc.org</a>
+      <a href="https://x.com/GtownFedSoc" target="_blank" rel="noopener">𝕏</a>
+      <a href="https://www.linkedin.com/company/georgetown-law-federalist-society/" target="_blank" rel="noopener">in</a>
+      <a href="https://www.instagram.com/gtownfedsoc/" target="_blank" rel="noopener">IG</a>
+    </div>
+  </footer>
+
+</body>
+</html>
