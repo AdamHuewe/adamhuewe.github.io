@@ -101,6 +101,14 @@
     /* ── NO MORE EVENTS ── */
     .no-more { text-align: center; padding: 40px; border: 1px dashed var(--border); border-radius: var(--radius); color: var(--gu-gray); font-style: italic; font-size: 15px; }
 
+    /* ── EVENT PAGE ADDITIONS ── */
+    .event-row-month { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gu-gray); margin-bottom: 2px; }
+    .badge-career { background: rgba(21,42,94,0.1); color: var(--gu-blue-2); }
+    .today-tag { display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 2px; background: var(--gu-blue); color: var(--gu-gold); font-size: 10px; letter-spacing: 0.1em; vertical-align: 1px; }
+    .event-row.is-today { border-left-color: var(--gu-gold); box-shadow: 0 2px 16px rgba(4,30,66,0.08); }
+    .events-list { margin-bottom: 40px; }
+    [hidden] { display: none !important; }
+
     /* ── FOOTER ── */
     footer { background: #08122a; padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid var(--gu-blue-2); }
     footer p { font-size: 12px; color: rgba(200,191,168,0.5); letter-spacing: 0.03em; }
@@ -116,7 +124,7 @@
       .page-title { font-size: 32px; }
       .content { padding: 40px 24px; }
       .event-row { grid-template-columns: 60px 1fr; gap: 16px; }
-      .event-row-meta { display: none; }
+      .event-row-meta { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-start; text-align: left; gap: 12px; padding-left: 76px; }
       footer { flex-direction: column; gap: 16px; align-items: flex-start; padding: 28px 24px; }
     }
   </style>
@@ -151,29 +159,252 @@
   <!-- CONTENT -->
   <div class="content">
 
-    <!-- SEPTEMBER 2026 -->
-    <div class="month-label">September 2026 <span>Academic year kickoff</span></div>
-    <div class="events-list">
-
-      <div class="event-row">
+    <div class="month-label">Upcoming Events <span>Soonest first</span></div>
+    <div class="events-list" id="upcoming-list">
+      <div class="event-row" data-date="2026-10-21">
         <div class="event-row-date">
-          <div class="event-row-day">9</div>
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">21</div>
           <div class="event-row-weekday">Wed</div>
         </div>
         <div class="event-row-body">
-          <div class="event-row-type">General Meeting</div>
-          <div class="event-row-title">General Body Meeting</div>
-          <div class="event-row-speaker">Georgetown Law Federalist Society — all members and prospective members welcome</div>
+          <div class="event-row-type">Debate</div>
+          <div class="event-row-title">Daniel Webster Debate Series</div>
+          <div class="event-row-speaker">The Major Questions Doctrine Is Consistent with Textualism &middot; Ilya Somin &amp; Chad Squitieri</div>
         </div>
         <div class="event-row-meta">
-          <span class="event-type-badge badge-meeting">Meeting</span>
-          <div class="event-row-time">4:30 pm</div>
-          <div class="event-row-location">Georgetown University Law Center</div>
+          <span class="event-type-badge badge-debate">Debate</span>
         </div>
       </div>
-
-      <div class="event-row">
+      <div class="event-row" data-date="2026-10-27">
         <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">27</div>
+          <div class="event-row-weekday">Tue</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">War, Pirates, and the True Origins of the Mootness Doctrine</div>
+          <div class="event-row-speaker">Scott MacGuidwin</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+          <div class="event-row-time">12:00 &ndash; 1:00 pm</div>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-10-28">
+        <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">28</div>
+          <div class="event-row-weekday">Wed</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Debate</div>
+          <div class="event-row-title">Daniel Webster Debate Series</div>
+          <div class="event-row-speaker">Was Slaughter Rightly Decided? &middot; Prof. Victoria Nourse &amp; Prof. Sai Prakash</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-debate">Debate</span>
+          <div class="event-row-time">5:45 &ndash; 7:00 pm</div>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-10-29">
+        <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">29</div>
+          <div class="event-row-weekday">Thu</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Executive Power and Appropriations</div>
+          <div class="event-row-speaker">Prof. Eloise Pasachoff</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+          <div class="event-row-time">12:10 &ndash; 1:10 pm</div>
+        </div>
+      </div>
+    </div>
+    <div class="no-more" id="upcoming-empty" hidden>No upcoming events are scheduled right now. Follow us on social media or subscribe to our newsletter for announcements.</div>
+
+    <div class="month-label" style="margin-top: 24px;">Past Events <span>Most recent first</span></div>
+    <div class="events-list" id="past-list">
+      <div class="event-row" data-date="2026-10-14">
+        <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">14</div>
+          <div class="event-row-weekday">Wed</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Debate</div>
+          <div class="event-row-title">Daniel Webster Debate Series</div>
+          <div class="event-row-speaker">St. Mary Parish v. Roy &middot; Prof. Stephanie Barclay &amp; Prof. Marty Lederman</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-debate">Debate</span>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-10-13">
+        <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">13</div>
+          <div class="event-row-weekday">Tue</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Free Speech in the Digital Age</div>
+          <div class="event-row-speaker">Judge Joshua Divine</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-10-08">
+        <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">8</div>
+          <div class="event-row-weekday">Thu</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Career Development</div>
+          <div class="event-row-title">Pursuing a Career in Academia</div>
+          <div class="event-row-speaker">Lee Otis</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-career">Career</span>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-10-06">
+        <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">6</div>
+          <div class="event-row-weekday">Tue</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Having the Government as a Client</div>
+          <div class="event-row-speaker">William K. Lane III &middot; General Counsel of the Air Force</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-10-05">
+        <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">5</div>
+          <div class="event-row-weekday">Mon</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Debate</div>
+          <div class="event-row-title">Daniel Webster Debate Series</div>
+          <div class="event-row-speaker">Should Courts Embrace the General Law? &middot; Stephen Sachs &amp; Bradford Clark</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-debate">Debate</span>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-10-01">
+        <div class="event-row-date">
+          <div class="event-row-month">Oct</div>
+          <div class="event-row-day">1</div>
+          <div class="event-row-weekday">Thu</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">The Rule of Law</div>
+          <div class="event-row-speaker">Judge Ray Kethledge &middot; Chief Judge, U.S. Court of Appeals for the Sixth Circuit</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-09-30">
+        <div class="event-row-date">
+          <div class="event-row-month">Sep</div>
+          <div class="event-row-day">30</div>
+          <div class="event-row-weekday">Wed</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Career Development</div>
+          <div class="event-row-title">Clerkships 101</div>
+          <div class="event-row-speaker">Michael Shenkman &amp; Brady Marzen</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-career">Career</span>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-09-23">
+        <div class="event-row-date">
+          <div class="event-row-month">Sep</div>
+          <div class="event-row-day">23</div>
+          <div class="event-row-weekday">Wed</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Debate</div>
+          <div class="event-row-title">Daniel Webster Debate Series</div>
+          <div class="event-row-speaker">Does AI Replace Corpus Linguistics As a Tool for Originalist Interpretation? &middot; Jack Kieffaber &amp; James Heilpern</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-debate">Debate</span>
+          <div class="event-row-time">5:45 pm</div>
+          <div class="event-row-location">Faculty Lounge</div>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-09-22">
+        <div class="event-row-date">
+          <div class="event-row-month">Sep</div>
+          <div class="event-row-day">22</div>
+          <div class="event-row-weekday">Tue</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Fireside Chat with Attorney General Skrmetti</div>
+          <div class="event-row-speaker">Attorney General Jonathan Skrmetti &middot; Tennessee Attorney General</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-fireside">Fireside Chat</span>
+          <div class="event-row-time">5:45 pm</div>
+          <div class="event-row-location">Hotung 2001</div>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-09-21">
+        <div class="event-row-date">
+          <div class="event-row-month">Sep</div>
+          <div class="event-row-day">21</div>
+          <div class="event-row-weekday">Mon</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Lies, Damned Lies, and the News</div>
+          <div class="event-row-speaker">Deroy Murdock &middot; Journalist &amp; Political Commentator</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+          <div class="event-row-time">12:00 &ndash; 1:00 pm</div>
+          <div class="event-row-location">McDonough 588</div>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-09-17">
+        <div class="event-row-date">
+          <div class="event-row-month">Sep</div>
+          <div class="event-row-day">17</div>
+          <div class="event-row-weekday">Thu</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Antislavery Constitutionalism</div>
+          <div class="event-row-speaker">Prof. Randy Barnett &middot; Georgetown University Law Center</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+          <div class="event-row-time">12:10 &ndash; 1:10 pm</div>
+          <div class="event-row-location">McDonough 200</div>
+        </div>
+      </div>
+      <div class="event-row" data-date="2026-09-16">
+        <div class="event-row-date">
+          <div class="event-row-month">Sep</div>
           <div class="event-row-day">16</div>
           <div class="event-row-weekday">Wed</div>
         </div>
@@ -188,80 +419,24 @@
           <div class="event-row-location">Georgetown University Law Center</div>
         </div>
       </div>
-
-      <div class="event-row">
+      <div class="event-row" data-date="2026-09-09">
         <div class="event-row-date">
-          <div class="event-row-day">17</div>
-          <div class="event-row-weekday">Thu</div>
-        </div>
-        <div class="event-row-body">
-          <div class="event-row-type">Speaker</div>
-          <div class="event-row-title">Antislavery Constitutionalism</div>
-          <div class="event-row-speaker">Prof. Randy Barnett · Georgetown University Law Center</div>
-        </div>
-        <div class="event-row-meta">
-          <span class="event-type-badge badge-speaker">Speaker</span>
-          <div class="event-row-time">12:10 – 1:10 pm</div>
-          <div class="event-row-location">McDonough 200</div>
-        </div>
-      </div>
-
-      <div class="event-row">
-        <div class="event-row-date">
-          <div class="event-row-day">21</div>
-          <div class="event-row-weekday">Mon</div>
-        </div>
-        <div class="event-row-body">
-          <div class="event-row-type">Speaker</div>
-          <div class="event-row-title">Lies, Damned Lies, and the News</div>
-          <div class="event-row-speaker">Deroy Murdock · Journalist &amp; Political Commentator</div>
-        </div>
-        <div class="event-row-meta">
-          <span class="event-type-badge badge-speaker">Speaker</span>
-          <div class="event-row-time">12:00 – 1:00 pm</div>
-          <div class="event-row-location">McDonough 588</div>
-        </div>
-      </div>
-
-      <div class="event-row">
-        <div class="event-row-date">
-          <div class="event-row-day">22</div>
-          <div class="event-row-weekday">Tue</div>
-        </div>
-        <div class="event-row-body">
-          <div class="event-row-type">Speaker</div>
-          <div class="event-row-title">Fireside Chat with Attorney General Skrmetti</div>
-          <div class="event-row-speaker">Attorney General Jonathan Skrmetti · Tennessee Attorney General</div>
-        </div>
-        <div class="event-row-meta">
-          <span class="event-type-badge badge-fireside">Fireside Chat</span>
-          <div class="event-row-time">5:45 pm</div>
-          <div class="event-row-location">Hotung 2001</div>
-        </div>
-      </div>
-
-      <div class="event-row">
-        <div class="event-row-date">
-          <div class="event-row-day">23</div>
+          <div class="event-row-month">Sep</div>
+          <div class="event-row-day">9</div>
           <div class="event-row-weekday">Wed</div>
         </div>
         <div class="event-row-body">
-          <div class="event-row-type">Debate</div>
-          <div class="event-row-title">Daniel Webster Debate Series</div>
-          <div class="event-row-speaker">Does AI Replace Corpus Linguistics As a Tool for Originalist Interpretation? · Jack Kieffaber &amp; James Heilpern</div>
+          <div class="event-row-type">General Meeting</div>
+          <div class="event-row-title">General Body Meeting</div>
+          <div class="event-row-speaker">Georgetown Law Federalist Society &mdash; all members and prospective members welcome</div>
         </div>
         <div class="event-row-meta">
-          <span class="event-type-badge badge-debate">Debate</span>
-          <div class="event-row-time">5:45 pm</div>
-          <div class="event-row-location">Faculty Lounge</div>
+          <span class="event-type-badge badge-meeting">Meeting</span>
+          <div class="event-row-time">4:30 pm</div>
+          <div class="event-row-location">Georgetown University Law Center</div>
         </div>
       </div>
-
     </div>
-
-    <!-- OCTOBER AND BEYOND -->
-    <div class="month-label">October 2026 &amp; Beyond <span>More events coming soon</span></div>
-    <div class="no-more">Additional events will be posted here as they are confirmed. Follow us on social media or subscribe to our newsletter for announcements.</div>
 
   </div>
 
@@ -276,6 +451,33 @@
       <a href="https://www.instagram.com/gtownfedsoc/" target="_blank" rel="noopener">IG</a>
     </div>
   </footer>
+
+<script>
+  // Sorts events into Upcoming / Past based on today's date, so the page stays current on its own.
+  (function () {
+    var upList = document.getElementById('upcoming-list');
+    var pastList = document.getElementById('past-list');
+    var emptyMsg = document.getElementById('upcoming-empty');
+    var rows = [].slice.call(document.querySelectorAll('.event-row'));
+    var d = new Date();
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    var today = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+    rows.sort(function (a, b) { return a.dataset.date < b.dataset.date ? -1 : 1; });
+    var up = rows.filter(function (r) { return r.dataset.date >= today; });
+    var past = rows.filter(function (r) { return r.dataset.date < today; }).reverse();
+    upList.innerHTML = ''; pastList.innerHTML = '';
+    up.forEach(function (r) {
+      if (r.dataset.date === today) {
+        r.classList.add('is-today');
+        var t = r.querySelector('.event-row-type');
+        if (t && !t.querySelector('.today-tag')) t.insertAdjacentHTML('beforeend', '<span class="today-tag">Today</span>');
+      }
+      upList.appendChild(r);
+    });
+    past.forEach(function (r) { pastList.appendChild(r); });
+    emptyMsg.hidden = up.length > 0;
+  })();
+</script>
 
 </body>
 </html>
