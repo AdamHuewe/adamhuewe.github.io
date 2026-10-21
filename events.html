@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Events — Georgetown Law Federalist Society</title>
+  <meta name="description" content="Upcoming speaker events, debates, and meetings hosted by the Georgetown Law Federalist Society." />
+  <meta name="keywords" content="Georgetown Law Federalist Society events, GULC FedSoc speaker series, law school debates Georgetown" />
+  <link rel="canonical" href="https://www.gulcfedsoc.org/events.html" />
+  <meta property="og:title" content="Events — Georgetown Law Federalist Society" />
+  <meta property="og:description" content="Upcoming speaker events, debates, and meetings hosted by the Georgetown Law Federalist Society." />
+  <meta property="og:image" content="https://www.gulcfedsoc.org/images/Logo.png" />
+  <meta property="og:url" content="https://www.gulcfedsoc.org/events.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@GtownFedSoc" />
+
+  <link rel="icon" type="image/png" href="images/Logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gu-blue:        #041E42;
+      --gu-blue-2:      #152a5e;
+      --gu-gray:        #666;
+      --gu-gray-light:  #aaa;
+      --gu-putty:       #c8bfa8;
+      --gu-gold:        #e8dfc8;
+      --text:           #1a1a1a;
+      --text-secondary: #555;
+      --border:         rgba(0,0,0,0.12);
+      --bg:             #ffffff;
+      --bg-secondary:   #f7f5f1;
+      --radius:         4px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'EB Garamond', Georgia, serif; color: var(--text); background: var(--bg); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--gu-blue); border-bottom: 2px solid var(--gu-blue-2); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; }
+    .nav-logo { display: flex; flex-direction: column; justify-content: center; }
+    .nav-logo-primary { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: #fff; letter-spacing: 0.01em; line-height: 1.2; }
+    .nav-logo-secondary { font-family: 'EB Garamond', serif; font-size: 11px; font-weight: 400; font-style: italic; color: var(--gu-putty); letter-spacing: 0.07em; margin-top: 2px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 13px; color: var(--gu-putty); letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.15s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .nav-cta { background: transparent; color: var(--gu-gold); border: 1px solid var(--gu-gold); border-radius: 2px; padding: 8px 20px; font-size: 12px; font-family: 'EB Garamond', serif; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: background 0.15s, color 0.15s; }
+    .nav-cta:hover { background: var(--gu-gold); color: var(--gu-blue); }
+
+    /* ── PAGE HEADER ── */
+    .page-header { background: var(--gu-blue); border-bottom: 3px solid var(--gu-gold); padding: 52px 48px 48px; }
+    .page-header-inner { max-width: 1140px; margin: 0 auto; }
+    .page-eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gu-putty); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+    .page-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gu-gold); }
+    .page-title { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 14px; }
+    .page-sub { font-size: 17px; color: var(--gu-putty); max-width: 560px; line-height: 1.7; }
+
+    /* ── CONTENT ── */
+    .content { max-width: 1140px; margin: 0 auto; padding: 56px 48px; }
+
+    /* ── MONTH LABEL ── */
+    .month-label { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--gu-blue); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--gu-blue); display: flex; align-items: center; gap: 12px; }
+    .month-label span { font-family: 'EB Garamond', serif; font-size: 13px; font-weight: 400; font-style: italic; color: var(--gu-gray); }
+
+    /* ── EVENT ROW ── */
+    .events-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 56px; }
+    .event-row {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 24px; align-items: center;
+      padding: 20px 24px;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gu-blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      background: #fff;
+      transition: border-left-color 0.2s, box-shadow 0.2s;
+    }
+    .event-row:hover { border-left-color: var(--gu-gold); box-shadow: 0 2px 16px rgba(4,30,66,0.08); }
+    .event-row-date { text-align: center; }
+    .event-row-day { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gu-blue); line-height: 1; }
+    .event-row-weekday { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gu-gray); margin-top: 3px; }
+    .event-row-body { border-left: 1px solid var(--border); padding-left: 24px; }
+    .event-row-type { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gu-gray); margin-bottom: 4px; }
+    .event-row-title { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--gu-blue); margin-bottom: 4px; line-height: 1.25; }
+    .event-row-speaker { font-size: 14px; color: var(--text-secondary); }
+    .event-row-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; text-align: right; flex-shrink: 0; }
+    .event-row-time { font-size: 13px; color: var(--gu-gray); white-space: nowrap; }
+    .event-row-location { font-size: 13px; color: var(--gu-gray); font-style: italic; white-space: nowrap; }
+    .event-type-badge { display: inline-block; padding: 3px 10px; border-radius: 2px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .badge-speaker { background: rgba(4,30,66,0.08); color: var(--gu-blue); }
+    .badge-debate { background: rgba(232,223,200,0.5); color: #5a4a2a; }
+    .badge-meeting { background: rgba(100,100,100,0.1); color: var(--gu-gray); }
+    .badge-fireside { background: rgba(180,60,30,0.08); color: #8b3a1a; }
+
+    /* ── NO MORE EVENTS ── */
+    .no-more { text-align: center; padding: 40px; border: 1px dashed var(--border); border-radius: var(--radius); color: var(--gu-gray); font-style: italic; font-size: 15px; }
+
+    /* ── FOOTER ── */
+    footer { background: #08122a; padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid var(--gu-blue-2); }
+    footer p { font-size: 12px; color: rgba(200,191,168,0.5); letter-spacing: 0.03em; }
+    .footer-links { display: flex; gap: 28px; }
+    .footer-links a { font-size: 12px; color: rgba(200,191,168,0.5); transition: color 0.15s; letter-spacing: 0.04em; }
+    .footer-links a:hover { color: var(--gu-putty); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .page-header { padding: 40px 24px; }
+      .page-title { font-size: 32px; }
+      .content { padding: 40px 24px; }
+      .event-row { grid-template-columns: 60px 1fr; gap: 16px; }
+      .event-row-meta { display: none; }
+      footer { flex-direction: column; gap: 16px; align-items: flex-start; padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-primary">Federalist Society</div>
+      <div class="nav-logo-secondary">Georgetown University Law Center</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="index.html#join">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location='index.html#join'">Join Us</button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Georgetown Law Federalist Society</p>
+      <h1 class="page-title">Events</h1>
+      <p class="page-sub">Speaker events, debates, and chapter meetings for the 2026–27 academic year. All events are open to Georgetown Law students.</p>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- SEPTEMBER 2026 -->
+    <div class="month-label">September 2026 <span>Academic year kickoff</span></div>
+    <div class="events-list">
+
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">9</div>
+          <div class="event-row-weekday">Tue</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">General Meeting</div>
+          <div class="event-row-title">General Body Meeting</div>
+          <div class="event-row-speaker">Georgetown Law Federalist Society — all members and prospective members welcome</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-meeting">Meeting</span>
+          <div class="event-row-time">4:30 pm</div>
+          <div class="event-row-location">Georgetown University Law Center</div>
+        </div>
+      </div>
+
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">16</div>
+          <div class="event-row-weekday">Tue</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Debate</div>
+          <div class="event-row-title">Daniel Webster Debate Series</div>
+          <div class="event-row-speaker">Are Geofence Warrants Constitutional?</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-debate">Debate</span>
+          <div class="event-row-time">5:45 pm</div>
+          <div class="event-row-location">Georgetown University Law Center</div>
+        </div>
+      </div>
+
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">17</div>
+          <div class="event-row-weekday">Wed</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Antislavery Constitutionalism</div>
+          <div class="event-row-speaker">Prof. Randy Barnett · Georgetown University Law Center</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+          <div class="event-row-time">12:10 – 1:10 pm</div>
+          <div class="event-row-location">McDonough 200</div>
+        </div>
+      </div>
+
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">21</div>
+          <div class="event-row-weekday">Sun</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Lies, Damned Lies, and the News</div>
+          <div class="event-row-speaker">Deroy Murdock · Journalist &amp; Political Commentator</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-speaker">Speaker</span>
+          <div class="event-row-time">12:00 – 1:00 pm</div>
+          <div class="event-row-location">McDonough 588</div>
+        </div>
+      </div>
+
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">22</div>
+          <div class="event-row-weekday">Mon</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Speaker</div>
+          <div class="event-row-title">Fireside Chat with Attorney General Skrmetti</div>
+          <div class="event-row-speaker">Attorney General Jonathan Skrmetti · Tennessee Attorney General</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-fireside">Fireside Chat</span>
+          <div class="event-row-time">5:45 pm</div>
+          <div class="event-row-location">Hotung 2001</div>
+        </div>
+      </div>
+
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">23</div>
+          <div class="event-row-weekday">Tue</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-type">Debate</div>
+          <div class="event-row-title">Daniel Webster Debate Series</div>
+          <div class="event-row-speaker">Does AI Replace Corpus Linguistics As a Tool for Originalist Interpretation? · Jack Kieffaber &amp; James Heilpern</div>
+        </div>
+        <div class="event-row-meta">
+          <span class="event-type-badge badge-debate">Debate</span>
+          <div class="event-row-time">5:45 pm</div>
+          <div class="event-row-location">Faculty Lounge</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- OCTOBER AND BEYOND -->
+    <div class="month-label">October 2026 &amp; Beyond <span>More events coming soon</span></div>
+    <div class="no-more">Additional events will be posted here as they are confirmed. Follow us on social media or subscribe to our newsletter for announcements.</div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Federalist Society, Georgetown University Law Center · 600 New Jersey Ave NW, Washington, D.C. 20001</p>
+    <div class="footer-links">
+      <a href="mailto:fedsoc@law.georgetown.edu">Contact</a>
+      <a href="https://fedsoc.org" target="_blank" rel="noopener">Fedsoc.org</a>
+      <a href="https://x.com/GtownFedSoc" target="_blank" rel="noopener">𝕏</a>
+      <a href="https://www.linkedin.com/company/georgetown-law-federalist-society/" target="_blank" rel="noopener">in</a>
+      <a href="https://www.instagram.com/gtownfedsoc/" target="_blank" rel="noopener">IG</a>
+    </div>
+  </footer>
+
+</body>
+</html>
