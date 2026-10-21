@@ -1,23 +1,182 @@
 [
- {"date":"2026-09-09","kind":"meeting","title":"General Body Meeting","sub":"Georgetown Law Federalist Society &mdash; all members and prospective members welcome","start":"16:30","end":"17:30","loc":"McDonough 203"},
- {"date":"2026-09-16","kind":"debate","title":"Daniel Webster Debate Series","sub":"Are Geofence Warrants Constitutional?","start":"17:45","end":"19:00","loc":"Hotung 2001"},
- {"date":"2026-09-17","kind":"speaker","title":"Antislavery Constitutionalism","sub":"Prof. Randy Barnett &middot; Georgetown University Law Center","start":"12:10","end":"13:10","loc":"McDonough 200"},
- {"date":"2026-09-21","kind":"speaker","title":"Lies, Damned Lies, and the News","sub":"Deroy Murdock &middot; Journalist &amp; Political Commentator","start":"12:00","end":"13:00","loc":"McDonough 588"},
- {"date":"2026-09-22","kind":"fireside","title":"Fireside Chat with Attorney General Skrmetti","sub":"Attorney General Jonathan Skrmetti &middot; Tennessee Attorney General","start":"17:45","end":"18:45","loc":"Hotung 2001"},
- {"date":"2026-09-23","kind":"debate","title":"Daniel Webster Debate Series","sub":"Does AI Replace Corpus Linguistics As a Tool for Originalist Interpretation? &middot; Jack Kieffaber &amp; James Heilpern","start":"17:45","end":"19:00","loc":"Faculty Lounge"},
- {"date":"2026-09-30","kind":"career","title":"Clerkships 101","sub":"Michael Shenkman &amp; Brady Marzen","start":"17:30","end":"18:30","loc":"Faculty Lounge"},
- {"date":"2026-10-01","kind":"speaker","title":"The Rule of Law","sub":"Judge Ray Kethledge &middot; Chief Judge, U.S. Court of Appeals for the Sixth Circuit","start":"12:10","end":"13:10","loc":"McDonough 200"},
- {"date":"2026-10-05","kind":"debate","title":"Daniel Webster Debate Series","sub":"Should Courts Embrace the General Law? &middot; Stephen Sachs &amp; Bradford Clark","start":"12:10","end":"13:25","loc":"Faculty Lounge"},
- {"date":"2026-10-06","kind":"speaker","title":"Having the Government as a Client","sub":"William K. Lane III &middot; General Counsel of the Air Force","start":"12:00","end":"13:00","loc":null},
- {"date":"2026-10-08","kind":"career","title":"Pursuing a Career in Academia","sub":"Lee Otis","start":"12:00","end":"13:00","loc":"McDonough 588"},
- {"date":"2026-10-13","kind":"speaker","title":"Free Speech in the Digital Age","sub":"Judge Joshua Divine","start":"18:00","end":"19:00","loc":null},
- {"date":"2026-10-14","kind":"debate","title":"Daniel Webster Debate Series","sub":"St. Mary Parish v. Roy &middot; Prof. Stephanie Barclay &amp; Prof. Marty Lederman","start":"17:45","end":"19:00","loc":null},
- {"date":"2026-10-21","kind":"debate","title":"Daniel Webster Debate Series","sub":"The Major Questions Doctrine Is Consistent with Textualism &middot; Ilya Somin &amp; Chad Squitieri","start":"17:45","end":"19:00","loc":null},
- {"date":"2026-10-27","kind":"speaker","title":"War, Pirates, and the True Origins of the Mootness Doctrine","sub":"Scott MacGuidwin","start":"12:10","end":"13:10","loc":"McDonough 588"},
- {"date":"2026-10-28","kind":"debate","title":"Daniel Webster Debate Series","sub":"Was Slaughter Rightly Decided? &middot; Prof. Victoria Nourse &amp; Prof. Sai Prakash","start":"17:45","end":"19:00","loc":null},
- {"date":"2026-10-29","kind":"speaker","title":"Executive Power and Appropriations","sub":"Prof. Eloise Pasachoff","start":"12:10","end":"13:10","loc":null},
- {"date":"2026-11-04","kind":"career","title":"Clerkship Panel","sub":"Elizabeth Denchfield, Kyle Grigel &amp; Ugonna Eze","start":"16:30","end":"17:30","loc":null},
- {"date":"2026-11-10","kind":"speaker","title":"Judges Panel","sub":"Judge Forst","start":"15:00","end":"16:00","loc":null},
- {"date":"2026-11-19","kind":"speaker","title":"Book Event","sub":"Bradley Rebeiro","start":"12:10","end":"13:10","loc":null},
- {"date":"2027-02-17","kind":"debate","title":"Daniel Webster Debate Series","sub":"Topic to be announced &middot; Chad Readler, moderator","start":"17:45","end":"19:00","loc":null}
+ {
+  "date": "2026-09-09",
+  "kind": "meeting",
+  "title": "General Body Meeting",
+  "sub": "Georgetown Law Federalist Society &mdash; all members and prospective members welcome",
+  "start": "16:30",
+  "end": "17:30",
+  "loc": "McDonough 203"
+ },
+ {
+  "date": "2026-09-16",
+  "kind": "debate",
+  "title": "Daniel Webster Debate Series",
+  "sub": "Are Geofence Warrants Constitutional?",
+  "start": "17:45",
+  "end": "19:00",
+  "loc": "Hotung 2001"
+ },
+ {
+  "date": "2026-09-17",
+  "kind": "speaker",
+  "title": "Antislavery Constitutionalism",
+  "sub": "Prof. Randy Barnett &middot; Georgetown University Law Center",
+  "start": "12:10",
+  "end": "13:10",
+  "loc": "McDonough 200"
+ },
+ {
+  "date": "2026-09-21",
+  "kind": "speaker",
+  "title": "Lies, Damned Lies, and the News",
+  "sub": "Deroy Murdock &middot; Journalist &amp; Political Commentator",
+  "start": "12:00",
+  "end": "13:00",
+  "loc": "McDonough 588"
+ },
+ {
+  "date": "2026-09-22",
+  "kind": "fireside",
+  "title": "Fireside Chat with Attorney General Skrmetti",
+  "sub": "Attorney General Jonathan Skrmetti &middot; Tennessee Attorney General",
+  "start": "17:45",
+  "end": "18:45",
+  "loc": "Hotung 2001"
+ },
+ {
+  "date": "2026-09-23",
+  "kind": "debate",
+  "title": "Daniel Webster Debate Series",
+  "sub": "Does AI Replace Corpus Linguistics As a Tool for Originalist Interpretation? &middot; Jack Kieffaber &amp; James Heilpern",
+  "start": "17:45",
+  "end": "19:00",
+  "loc": "Faculty Lounge"
+ },
+ {
+  "date": "2026-09-30",
+  "kind": "career",
+  "title": "Clerkships 101",
+  "sub": "Michael Shenkman &amp; Brady Marzen",
+  "start": "17:30",
+  "end": "18:30",
+  "loc": "Faculty Lounge"
+ },
+ {
+  "date": "2026-10-01",
+  "kind": "speaker",
+  "title": "The Rule of Law",
+  "sub": "Judge Ray Kethledge &middot; Chief Judge, U.S. Court of Appeals for the Sixth Circuit",
+  "start": "12:10",
+  "end": "13:10",
+  "loc": "McDonough 200"
+ },
+ {
+  "date": "2026-10-05",
+  "kind": "debate",
+  "title": "Daniel Webster Debate Series",
+  "sub": "Should Courts Embrace the General Law? &middot; Prof. Stephen Sachs &amp; Prof. Bradford Clark",
+  "start": "12:10",
+  "end": "13:25",
+  "loc": "Faculty Lounge"
+ },
+ {
+  "date": "2026-10-06",
+  "kind": "speaker",
+  "title": "Having the Government as a Client",
+  "sub": "William K. Lane III &middot; General Counsel of the Air Force",
+  "start": "12:00",
+  "end": "13:00",
+  "loc": null
+ },
+ {
+  "date": "2026-10-08",
+  "kind": "career",
+  "title": "Pursuing a Career in Academia",
+  "sub": "Lee Otis",
+  "start": "12:00",
+  "end": "13:00",
+  "loc": "McDonough 588"
+ },
+ {
+  "date": "2026-10-13",
+  "kind": "speaker",
+  "title": "Free Speech in the Digital Age",
+  "sub": "Judge Joshua Divine &middot; U.S. District Court, Eastern District of Missouri",
+  "start": "18:00",
+  "end": "19:00",
+  "loc": null
+ },
+ {
+  "date": "2026-10-14",
+  "kind": "debate",
+  "title": "Daniel Webster Debate Series",
+  "sub": "St. Mary Parish v. Roy &middot; Prof. Stephanie Barclay &amp; Prof. Marty Lederman",
+  "start": "17:45",
+  "end": "19:00",
+  "loc": null
+ },
+ {
+  "date": "2026-10-21",
+  "kind": "debate",
+  "title": "Daniel Webster Debate Series",
+  "sub": "The Major Questions Doctrine Is Consistent with Textualism &middot; Prof. Ilya Somin &amp; Prof. Chad Squitieri",
+  "start": "17:45",
+  "end": "19:00",
+  "loc": null
+ },
+ {
+  "date": "2026-10-27",
+  "kind": "speaker",
+  "title": "War, Pirates, and the True Origins of the Mootness Doctrine",
+  "sub": "Scott MacGuidwin",
+  "start": "12:10",
+  "end": "13:10",
+  "loc": "McDonough 588"
+ },
+ {
+  "date": "2026-10-28",
+  "kind": "debate",
+  "title": "Daniel Webster Debate Series",
+  "sub": "Was Slaughter Rightly Decided? &middot; Prof. Victoria Nourse &amp; Prof. Sai Prakash",
+  "start": "17:45",
+  "end": "19:00",
+  "loc": null
+ },
+ {
+  "date": "2026-10-29",
+  "kind": "speaker",
+  "title": "Executive Power and Appropriations",
+  "sub": "Prof. Eloise Pasachoff",
+  "start": "12:10",
+  "end": "13:10",
+  "loc": null
+ },
+ {
+  "date": "2026-11-04",
+  "kind": "career",
+  "title": "Clerkship Panel",
+  "sub": "Elizabeth Denchfield, Kyle Grigel &amp; Ugonna Eze",
+  "start": "16:30",
+  "end": "17:30",
+  "loc": null
+ },
+ {
+  "date": "2026-11-10",
+  "kind": "speaker",
+  "title": "Judges Panel",
+  "sub": "Judge Forst",
+  "start": "15:00",
+  "end": "16:00",
+  "loc": null
+ },
+ {
+  "date": "2026-11-19",
+  "kind": "speaker",
+  "title": "Book Event",
+  "sub": "Prof. Bradley Rebeiro &middot; BYU Law School",
+  "start": "12:10",
+  "end": "13:10",
+  "loc": null
+ }
 ]

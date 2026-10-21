@@ -10,6 +10,9 @@ KINDS = {"meeting": ("General Meeting", "Meeting", "badge-meeting"), "debate": (
 DWS = "Daniel Webster Debate Series"
 events = json.load(open(ROOT / "tools" / "events.json", encoding="utf-8"))
 for e in events: e["d"] = datetime.date.fromisoformat(e["date"])
+# Policy: do not publish events more than one month out unless the owner approved ("approved": true).
+CUTOFF = TODAY + datetime.timedelta(days=31)
+events = [e for e in events if e["d"] <= CUTOFF or e.get("approved")]
 
 def t12(s):
     h, m = map(int, s.split(":")); return h % 12 or 12, m, "am" if h < 12 else "pm"
