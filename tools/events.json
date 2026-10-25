@@ -136,6 +136,15 @@
  },
  {
   "date": "2026-10-28",
+  "kind": "speaker",
+  "title": "Birthright Citizenship: Where SCOTUS Went Wrong",
+  "sub": "John Eastman",
+  "start": "12:30",
+  "end": "13:30",
+  "loc": "McDonough 208"
+ },
+ {
+  "date": "2026-10-28",
   "kind": "debate",
   "title": "Daniel Webster Debate Series",
   "sub": "Was Slaughter Rightly Decided? &middot; Prof. Victoria Nourse &amp; Prof. Sai Prakash",
@@ -157,8 +166,8 @@
   "kind": "career",
   "title": "Clerkship Panel",
   "sub": "Elizabeth Denchfield, Kyle Grigel &amp; Ugonna Eze",
-  "start": "16:30",
-  "end": "17:30",
+  "start": "16:00",
+  "end": "17:00",
   "loc": null
  },
  {
