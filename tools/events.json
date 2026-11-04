@@ -187,5 +187,14 @@
   "start": "15:00",
   "end": "16:00",
   "loc": "Gewirz 12"
+ },
+ {
+  "date": "2026-11-19",
+  "kind": "speaker",
+  "title": "Book Event",
+  "sub": "Prof. Bradley Rebeiro &middot; BYU Law School",
+  "start": "12:10",
+  "end": "13:10",
+  "loc": null
  }
 ]
